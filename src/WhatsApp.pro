@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT += core gui webengine webenginewidgets xml positioning
+QT += webengine webenginewidgets positioning
 
 CONFIG += c++11
 
