@@ -817,7 +817,6 @@ void SettingsWidget::loadLanguages(QStringList languages) {
 
 void SettingsWidget::on_langComboBox_currentIndexChanged(int index) {
   QString languageCode = ui->langComboBox->itemData(index).toString();
-  settings.setValue("lang", languageCode);
   loadLanguage(languageCode);
 }
 
@@ -854,6 +853,9 @@ void SettingsWidget::switchTranslator(QTranslator &translator,
     qWarning("*** Failed translator.load(\"%s\")", filename.toLatin1().data());
     return;
   }
+  QString languageCode =
+      ui->langComboBox->itemData(ui->langComboBox->currentIndex()).toString();
+  settings.setValue("lang", languageCode);
   qApp->installTranslator(&translator);
 }
 
