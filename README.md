@@ -61,6 +61,10 @@ Options:
 The source code can be built using the regular Qt application development procedure. Whatsie Project makes use of Qt's QMake build system, which simplifies the build process. To build Whatsie locally on your system, follow the steps below.
 
 ### Build requirements
+-- Pacotes para build no debian 12 --
+
+libx11-dev libx11-xcb-dev qtwebengine5-dev libqt5webenginewidgets5 qtpositioning5-devqtwebengine5-dev-tools
+
  - git (to clone repo)
  - libx11-dev libx11-xcb-dev (required for x11 XKB module support at build time)
  - Qt => 5.9 (5.15 recommended) with the following modules installed with development headers (lib*-dev packages on Ubuntu)
